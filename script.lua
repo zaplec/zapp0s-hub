@@ -302,7 +302,7 @@ hori:AddButton("Penis",function()
 ⬛⬛]])
 end)
 
-hori:AddButton("meepshit",function()
+hori:AddButton("Fuck",function()
 	NBox:Set([[⬛
 ⬛⬛
 ⬛⬛
@@ -322,18 +322,6 @@ hori:AddButton("meepshit",function()
 ⬛⬛⬛⬛⬛⬛
 ⬛⬛⬛⬛⬛⬛
 ⬛⬛⬛⬛⬛⬛]])
-end)
-
-hori:AddButton("Gun", function()
-    NBox:Set([[░▐█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█▄☆
-    ░███████████████████████
-    ░▓▓▓▓▓▓▓▓▓▓▓▓██▓▓▓▓▓▓▓▓◤
-    ╬▀░▐▓▓▓▓▓▓▌▀█░░░█▀░
-    ▒░░▓▓▓▓▓▓█▄▄▄▄▄█▀╬░
-    ░░█▓▓▓▓▓▌░▒▒▒▒▒▒▒▒▒
-    ░▐█▓▓▓▓▓░░▒▒▒▒▒▒▒▒▒
-    ░▐██████▌╬░▒▒▒▒▒▒▒▒
-    ]])
 end)
 
 hori:AddButton("Fuck",function()
