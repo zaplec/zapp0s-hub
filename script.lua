@@ -323,18 +323,6 @@ hori:AddButton("meepshit",function()
 ⬛⬛⬛⬛⬛⬛]])
 end)
 
-hori:AddButton("Gun", function()
-    NBox:Set([[░▐█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█▄☆
-    ░███████████████████████
-    ░▓▓▓▓▓▓▓▓▓▓▓▓██▓▓▓▓▓▓▓▓◤
-    ╬▀░▐▓▓▓▓▓▓▌▀█░░░█▀░
-    ▒░░▓▓▓▓▓▓█▄▄▄▄▄█▀╬░
-    ░░█▓▓▓▓▓▌░▒▒▒▒▒▒▒▒▒
-    ░▐█▓▓▓▓▓░░▒▒▒▒▒▒▒▒▒
-    ░▐██████▌╬░▒▒▒▒▒▒▒▒
-    ]])
-end)
-
 hori:AddButton("Fuck",function()
 	NBox:Set(game:HttpGet("https://raw.githubusercontent.com/zaplec/zapp0s-hub/main/f.lua"))
 end)
