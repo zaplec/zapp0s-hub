@@ -89,7 +89,6 @@ local AvatarWindow = library:AddWindow("Avatar", WindowOptions)
 
 local Welcome = Window:AddTab("Welcome")
 Welcome:AddLabel("Thank you for using Meep$hit.")
-Welcome:AddLebel("This script was made by zap#9999")
 Welcome:AddButton("Join Our Discord Server",function()
     local Settings = {
         InviteCode = "ErvSnrY37M"
