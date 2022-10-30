@@ -302,7 +302,7 @@ hori:AddButton("Penis",function()
 ⬛⬛]])
 end)
 
-hori:AddButton("Fuck",function()
+hori:AddButton("Dildo",function()
 	NBox:Set([[⬛
 ⬛⬛
 ⬛⬛
