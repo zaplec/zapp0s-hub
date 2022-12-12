@@ -10,7 +10,7 @@ if getconnections then
     end
 end
 
-if getgenv().Rogue_AlreadyLoaded ~= nil then error("zapp0s hub was already found running or you have other scripts executed!") return else getgenv().Rogue_AlreadyLoaded = 0 end
+if getgenv().Rogue_AlreadyLoaded ~= nil then error("zapp0s hub is already running or you have other scripts executed!") return else getgenv().Rogue_AlreadyLoaded = 0 end
 
 if game.PlaceId ~= 6407649031 then return end
 
@@ -56,7 +56,7 @@ sound.Volume = 0.5
 local ourColor = Color3.fromRGB(153, 148, 148)
 
 function CheckConfigFile()
-    if not isfile("/zapp0s Hub/Configs/Keybind.ZAPP0SHUB") then return Enum.KeyCode.RightControl else return Enum.KeyCode[game:GetService("HttpService"):JSONDecode(readfile("/Rogue Hub/Configs/Keybind.ZAPP0SHUB"))["Key"]] or Enum.KeyCode.RightControl end
+    if not isfile("/zapp0sHub/Configs/Keybind.ZAPP0SHUB") then return Enum.KeyCode.RightControl else return Enum.KeyCode[game:GetService("HttpService"):JSONDecode(readfile("/zapp0sHub/Configs/Keybind.ZAPP0SHUB"))["Key"]] or Enum.KeyCode.RightControl end
 end
 
 local Config = {
@@ -101,25 +101,25 @@ getgenv().settings = {
     espRainbow = false
 }
 
-if makefolder and isfolder and not isfolder("zapp0s hub") then
-    makefolder("zapp0s hub")
+if makefolder and isfolder and not isfolder("zapp0sHub") then
+    makefolder("zapp0sHub")
 
-    makefolder("zapp0s hub/Configs")
-    makefolder("zapp0s hub/Data")
+    makefolder("zapp0sHub/Configs")
+    makefolder("zapp0sHub/Data")
 end
 
-if readfile and isfile and isfile("zapp0s hub/Configs/NoScopeArcade_Config.ZAPP0SHUB") then
-    getgenv().settings = game:GetService("HttpService"):JSONDecode(readfile("zapp0s hub/Configs/NoScopeArcade_Config.ZAPP0SHUB"))
+if readfile and isfile and isfile("zapp0sHub/Configs/NoScopeArcade_Config.ZAPP0SHUB") then
+    getgenv().settings = game:GetService("HttpService"):JSONDecode(readfile("zapp0sHub/Configs/NoScopeArcade_Config.ZAPP0SHUB"))
 end
 
 local function saveSettings()
     if writefile then
-        writefile("zapp0s hub/Configs/NoScopeArcade_Config.ZAPP0SHUB", game:GetService("HttpService"):JSONEncode(getgenv().settings))
+        writefile("zapp0sHub/Configs/NoScopeArcade_Config.ZAPP0SHUB", game:GetService("HttpService"):JSONEncode(getgenv().settings))
     end
 end
 
 function getQuote()
-    local userQuotes = game:GetService("HttpService"):JSONDecode(readfile("/zapp0s hub/Configs/Quotes.ZAPP0SHUB"))
+    local userQuotes = game:GetService("HttpService"):JSONDecode(readfile("/zapp0sHub/Configs/Quotes.ZAPP0SHUB"))
     return userQuotes[math.random(#userQuotes)]
 end
 
@@ -689,7 +689,7 @@ end)
 uiTog:CreateKeybind(tostring(Config.Keybind):gsub("Enum.KeyCode.", ""), function(key)
 	if key == "Escape" or key == "Backspace" then key = "NONE" end
 	
-    if key == "NONE" then return else Config.Keybind = Enum.KeyCode[key]; writefile("/zapp0s hub/Configs/Keybind.ZAPP0SHUB", game:GetService("HttpService"):JSONEncode({Key = key})) end
+    if key == "NONE" then return else Config.Keybind = Enum.KeyCode[key]; writefile("/zapp0sHub/Configs/Keybind.ZAPP0SHUB", game:GetService("HttpService"):JSONEncode({Key = key})) end
 end)
 
 uiTog:SetState(true)
@@ -724,8 +724,8 @@ infoSec:CreateButton("Father of zapp0s hub: zap#9999", function()
     })
 end)
 
-infoSec:CreateButton("Help with a lot: Luv u2mj ღ#8910", function()
-    setclipboard("Luv u2mj ღ#8910")
+infoSec:CreateButton("Help with a lot: u2mj#8910", function()
+    setclipboard("u2mj#8910")
     
     game:GetService("StarterGui"):SetCore("SendNotification", {
         Title = "Script Notification",
