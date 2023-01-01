@@ -1,5 +1,4 @@
---This Shit Was Made By Zaplec MUAHAHAHAH
-
+--THIS WAS UPDATED BY ZAPLEC MUHAHAHAHAA
 Library=loadstring(game:HttpGet("https://pastebin.com/raw/bfSMHFwJ"))()
 
 Client = {
@@ -32,7 +31,7 @@ Client = {
         LookMeth = 'Look Up',                                                                                                                                                                                                                                                 
         Test = '',
         FOV = 150,
-        ChatMsg = 'Zapp0s Ware v2 On Top',
+        ChatMsg = 'xonaes Anti Cheat Updates arent nothing for me lmao',
         AimPart = 'Head'
 
         
@@ -506,7 +505,6 @@ local ArsoniaTable={
             ColCol=function(a,b)return Color3.new(math.clamp(a.R+b.R,0,1),math.clamp(a.G+b.G,0,1),math.clamp(a.B+b.B,0,1))end,
             _=(function()if setfpscap then setfpscap(999)end for _,v in pairs(game.ReplicatedStorage.Viewmodels:GetChildren())do if v:FindFirstChild("HumanoidRootPart")then v.HumanoidRootPart.Transparency=1 end end 
                 debug.setconstant(require(game.Players.LocalPlayer.PlayerGui.GUI.Client.Functions.Weapons).firebullet,321,"ArsoniaFireRate")
-                debug.setconstant(require(game.Players.LocalPlayer.PlayerGui.GUI.Client.Functions.Weapons).reloadwep,123,"ArsoniaEReloadTime")
                 debug.setconstant(require(game.Players.LocalPlayer.PlayerGui.GUI.Client.Functions.Weapons).countammo,61,"ArsoniaStoredAmmo")
                --XONAE IS A NIGGER
                 debug.setconstant(getsenv(game.Players.LocalPlayer.PlayerGui.GUI.Client).updtprimary,9,"ArsoniaStoredAmmo")for _,v in pairs(game.ReplicatedStorage.Weapons:GetChildren())do if v:FindFirstChild("FireRate")then local a=v.FireRate:Clone()a.Parent=v a.Name="ArsoniaFireRate"end if v:FindFirstChild("ReloadTime")then local a=v.ReloadTime:Clone()a.Parent=v a.Name="ArsoniaReloadTime"end if v:FindFirstChild("EReloadTime")then local a=v.EReloadTime:Clone()a.Parent=v a.Name="ArsoniaEReloadTime"end if v:FindFirstChild("EquipTime")then local a=v.EquipTime:Clone()a.Parent=v a.Name="ArsoniaEquipTime"end if v:FindFirstChild("StoredAmmo")then local a=v.StoredAmmo:Clone()a.Parent=v a.Name="ArsoniaStoredAmmo"end if v:FindFirstChild("Range")and v:FindFirstChild("Melee")and v:FindFirstChild("Backstab")then local a=v.Range:Clone()a.Parent=v a.Name="ArsoniaRange"end end end)(),
@@ -532,7 +530,7 @@ local ArsoniaTable={
 }
 
 
-local name="Zapp0s Ware v2 - Fully Undetected - "..identifyexecutor()..""
+local name="Zapp0s Ware v3 - Fully Undetected - "..identifyexecutor()..""
 
 if _G.Funnyname then
     local Prefix={"Epic","","Working"}
@@ -774,8 +772,8 @@ spawn(function()
         ping = math.random(30, 70)end end)
     spawn(function()
         game:GetService("RunService").RenderStepped:connect(function()game.Players.LocalPlayer.Ping.Value = ping end)end)while wait() do local args = {
-    [1] = 500,
-    [2] = "LOL"
+    [1] = 100,
+    [2] = "PingDeez"
 }
 
 game:GetService("ReplicatedStorage").Events.UpdatePing:FireServer(unpack(args))end
@@ -1847,21 +1845,24 @@ end)
 VisualsTabESPSection:Toggle("3D Box ESP (Cant Change Color)",function(state)
         on = state
         if on == true then 
-
+        --// Made by Blissful#4992
+        --// Locals:
         local workspace = game:GetService("Workspace")
         local player = game:GetService("Players").LocalPlayer
         local camera = workspace.CurrentCamera
         
+        --// Settings:
+        
         local Box_Color = Color3.fromRGB(255, 0, 0)
         local Box_Thickness = 2
-        local Box_Transparency = 1
+        local Box_Transparency = 1 -- 1 Visible, 0 Not Visible
         
         local Tracers = false
         local Tracer_Color = Color3.fromRGB(255, 0, 0)
         local Tracer_Thickness = 2
-        local Tracer_Transparency = 1
+        local Tracer_Transparency = 1 -- 1 Visible, 0 Not Visible
         
-        local Autothickness = false
+        local Autothickness = false -- Makes screen less encumbered
         
         local Team_Check = true
         local red = Color3.fromRGB(227, 52, 52)
@@ -1878,7 +1879,9 @@ VisualsTabESPSection:Toggle("3D Box ESP (Cant Change Color)",function(state)
             return line
         end
         
+        --// Main Function:
         for i, v in pairs(game.Players:GetChildren()) do
+            --// Lines for 3D box (12)
             local lines = {
                 line1 = NewLine(),
                 line2 = NewLine(),
@@ -1899,6 +1902,7 @@ VisualsTabESPSection:Toggle("3D Box ESP (Cant Change Color)",function(state)
             lines.Tracer.Thickness = Tracer_Thickness
             lines.Tracer.Transparency = Tracer_Transparency
         
+            --// Updates ESP (lines) in render loop
             local function ESP()
                 local connection
                 connection = game:GetService("RunService").RenderStepped:Connect(function()
@@ -1906,7 +1910,7 @@ VisualsTabESPSection:Toggle("3D Box ESP (Cant Change Color)",function(state)
                         local pos, vis = camera:WorldToViewportPoint(v.Character.HumanoidRootPart.Position)
                         if vis then
                             local Scale = v.Character.Head.Size.Y/2
-                            local Size = Vector3.new(2, 3, 1.5) * (Scale * 2)
+                            local Size = Vector3.new(2, 3, 1.5) * (Scale * 2) -- Change this for different box size
         
                             local Top1 = camera:WorldToViewportPoint((v.Character.HumanoidRootPart.CFrame * CFrame.new(-Size.X, Size.Y, -Size.Z)).p)
                             local Top2 = camera:WorldToViewportPoint((v.Character.HumanoidRootPart.CFrame * CFrame.new(-Size.X, Size.Y, Size.Z)).p)
@@ -1918,6 +1922,7 @@ VisualsTabESPSection:Toggle("3D Box ESP (Cant Change Color)",function(state)
                             local Bottom3 = camera:WorldToViewportPoint((v.Character.HumanoidRootPart.CFrame * CFrame.new(Size.X, -Size.Y, Size.Z)).p)
                             local Bottom4 = camera:WorldToViewportPoint((v.Character.HumanoidRootPart.CFrame * CFrame.new(Size.X, -Size.Y, -Size.Z)).p)
         
+                            --// Top:
                             lines.line1.From = Vector2.new(Top1.X, Top1.Y)
                             lines.line1.To = Vector2.new(Top2.X, Top2.Y)
         
@@ -1930,6 +1935,7 @@ VisualsTabESPSection:Toggle("3D Box ESP (Cant Change Color)",function(state)
                             lines.line4.From = Vector2.new(Top4.X, Top4.Y)
                             lines.line4.To = Vector2.new(Top1.X, Top1.Y)
         
+                            --// Bottom:
                             lines.line5.From = Vector2.new(Bottom1.X, Bottom1.Y)
                             lines.line5.To = Vector2.new(Bottom2.X, Bottom2.Y)
         
@@ -1942,6 +1948,7 @@ VisualsTabESPSection:Toggle("3D Box ESP (Cant Change Color)",function(state)
                             lines.line8.From = Vector2.new(Bottom4.X, Bottom4.Y)
                             lines.line8.To = Vector2.new(Bottom1.X, Bottom1.Y)
         
+                            --//S ides:
                             lines.line9.From = Vector2.new(Bottom1.X, Bottom1.Y)
                             lines.line9.To = Vector2.new(Top1.X, Top1.Y)
         
@@ -1954,6 +1961,7 @@ VisualsTabESPSection:Toggle("3D Box ESP (Cant Change Color)",function(state)
                             lines.line12.From = Vector2.new(Bottom4.X, Bottom4.Y)
                             lines.line12.To = Vector2.new(Top4.X, Top4.Y)
         
+                            --// Tracer:
                             if Tracers then
                                 local trace = camera:WorldToViewportPoint((v.Character.HumanoidRootPart.CFrame * CFrame.new(0, -Size.Y, 0)).p)
         
@@ -1961,6 +1969,7 @@ VisualsTabESPSection:Toggle("3D Box ESP (Cant Change Color)",function(state)
                                 lines.Tracer.To = Vector2.new(trace.X, trace.Y)
                             end
         
+                            --// Teamcheck:
                             if Team_Check then
                                 if v.TeamColor == player.TeamColor then
                                     for u, x in pairs(lines) do
@@ -1973,9 +1982,10 @@ VisualsTabESPSection:Toggle("3D Box ESP (Cant Change Color)",function(state)
                                 end
                             end
         
+                            --// Autothickness:
                             if Autothickness then
                                 local distance = (player.Character.HumanoidRootPart.Position - v.Character.HumanoidRootPart.Position).magnitude
-                                local value = math.clamp(1/distance*100, 0.1, 4)
+                                local value = math.clamp(1/distance*100, 0.1, 4) --0.1 is min thickness, 6 is max
                                 for u, x in pairs(lines) do
                                     x.Thickness = value
                                 end
@@ -2012,6 +2022,7 @@ VisualsTabESPSection:Toggle("3D Box ESP (Cant Change Color)",function(state)
         end
         
         game.Players.PlayerAdded:Connect(function(newplr)
+            --// Lines for 3D box (12)
             local lines = {
                 line1 = NewLine(),
                 line2 = NewLine(),
@@ -2032,6 +2043,7 @@ VisualsTabESPSection:Toggle("3D Box ESP (Cant Change Color)",function(state)
             lines.Tracer.Thickness = Tracer_Thickness
             lines.Tracer.Transparency = Tracer_Transparency
         
+            --// Updates ESP (lines) in render loop
             local function ESP()
                 local connection
                 connection = game:GetService("RunService").RenderStepped:Connect(function()
@@ -2039,7 +2051,7 @@ VisualsTabESPSection:Toggle("3D Box ESP (Cant Change Color)",function(state)
                         local pos, vis = camera:WorldToViewportPoint(newplr.Character.HumanoidRootPart.Position)
                         if vis then
                             local Scale = newplr.Character.Head.Size.Y/2
-                            local Size = Vector3.new(2, 3, 1.5) * (Scale * 2)
+                            local Size = Vector3.new(2, 3, 1.5) * (Scale * 2) -- Change this for different box size
         
                             local Top1 = camera:WorldToViewportPoint((newplr.Character.HumanoidRootPart.CFrame * CFrame.new(-Size.X, Size.Y, -Size.Z)).p)
                             local Top2 = camera:WorldToViewportPoint((newplr.Character.HumanoidRootPart.CFrame * CFrame.new(-Size.X, Size.Y, Size.Z)).p)
@@ -2051,7 +2063,7 @@ VisualsTabESPSection:Toggle("3D Box ESP (Cant Change Color)",function(state)
                             local Bottom3 = camera:WorldToViewportPoint((newplr.Character.HumanoidRootPart.CFrame * CFrame.new(Size.X, -Size.Y, Size.Z)).p)
                             local Bottom4 = camera:WorldToViewportPoint((newplr.Character.HumanoidRootPart.CFrame * CFrame.new(Size.X, -Size.Y, -Size.Z)).p)
         
-
+                            --// Top:
                             lines.line1.From = Vector2.new(Top1.X, Top1.Y)
                             lines.line1.To = Vector2.new(Top2.X, Top2.Y)
         
@@ -2064,6 +2076,7 @@ VisualsTabESPSection:Toggle("3D Box ESP (Cant Change Color)",function(state)
                             lines.line4.From = Vector2.new(Top4.X, Top4.Y)
                             lines.line4.To = Vector2.new(Top1.X, Top1.Y)
         
+                            --// Bottom:
                             lines.line5.From = Vector2.new(Bottom1.X, Bottom1.Y)
                             lines.line5.To = Vector2.new(Bottom2.X, Bottom2.Y)
         
@@ -2076,6 +2089,7 @@ VisualsTabESPSection:Toggle("3D Box ESP (Cant Change Color)",function(state)
                             lines.line8.From = Vector2.new(Bottom4.X, Bottom4.Y)
                             lines.line8.To = Vector2.new(Bottom1.X, Bottom1.Y)
         
+                            --//S ides:
                             lines.line9.From = Vector2.new(Bottom1.X, Bottom1.Y)
                             lines.line9.To = Vector2.new(Top1.X, Top1.Y)
         
@@ -2088,12 +2102,14 @@ VisualsTabESPSection:Toggle("3D Box ESP (Cant Change Color)",function(state)
                             lines.line12.From = Vector2.new(Bottom4.X, Bottom4.Y)
                             lines.line12.To = Vector2.new(Top4.X, Top4.Y)
         
+                            --// Tracer:
                             if Tracers then
                                 local trace = camera:WorldToViewportPoint((newplr.Character.HumanoidRootPart.CFrame * CFrame.new(0, -Size.Y, 0)).p)
                                 lines.Tracer.From = Vector2.new(camera.ViewportSize.X/2, camera.ViewportSize.Y)
                                 lines.Tracer.To = Vector2.new(trace.X, trace.Y)
                             end
         
+                            --// Teamcheck:
                             if Team_Check then
                                 if newplr.TeamColor == player.TeamColor then
                                     for u, x in pairs(lines) do
@@ -2106,9 +2122,10 @@ VisualsTabESPSection:Toggle("3D Box ESP (Cant Change Color)",function(state)
                                 end
                             end
         
+                            --// Autothickness:
                             if Autothickness then
                                 local distance = (player.Character.HumanoidRootPart.Position - newplr.Character.HumanoidRootPart.Position).magnitude
-                                local value = math.clamp(1/distance*100, 0.1, 4)
+                                local value = math.clamp(1/distance*100, 0.1, 4) --0.1 is min thickness, 6 is max
                                 for u, x in pairs(lines) do
                                     x.Thickness = value
                                 end
@@ -2206,6 +2223,8 @@ VisualsTabViewmodelSection:Dropdown("Material",ArsoniaTable.Variables.Materials,
     end
 end)
 
+
+
 local VisualsTabAmbienceSection=VisualsTab:Section("Ambience")
 VisualsTabAmbienceSection:Toggle("Enable Ambience",function(x)
     ArsoniaTable.Visuals.Worldambience.Enabled=x
@@ -2299,8 +2318,16 @@ VisualsTabMainSection:Color("Crosshair Color",Color3.fromRGB(196, 0, 255),functi
     ArsoniaTable.Visuals.Main.Crosshaircol=x
 end)
 
+
+
+
 local MiscTab=Window:Tab("Misc")
 local MiscTabMainSection=MiscTab:Section("Main")
+
+
+
+
+
 
 MiscTabMainSection:Toggle("Enable Misc",function(x)
     ArsoniaTable.Misc.Main.Enabled=x
@@ -2318,9 +2345,12 @@ MiscTabMainSection:Toggle("Enable Misc",function(x)
     end
 end)
 
+
+
 MiscTabMainSection:Toggle("Fast Respawn",function(x)
         ArsoniaTable.Misc.Main.Fastrespawn=x
 end)
+
 
 --[[MiscTabMainSection:Toggle("Cloud Spam",function(x)
     ArsoniaTable.Misc.Main.Cloudspam=x
@@ -2366,23 +2396,43 @@ MiscTabMainSection:Dropdown("Device Spoofer",{"PC","Mobile","XBOX","Wii Steering
     end
 end)
 
-MiscTabMainSection:Toggle("Chat Spam",function(state)
+MiscTabMainSection:Toggle("Chat Spam (xonae i had to remake this smh)",function(state)
     Client.Toggles.SpamChat = state
 end)
 spawn(function()
     while true do
         wait(.01)
         if Client.Toggles.SpamChat == true then
-        local A_1 = "Hah!"
-local A_2 = Client.Values.ChatMsg
-local A_3 = false
-local Event = game:GetService("ReplicatedStorage").Events.PlayerChatted
-Event:FireServer(A_1, A_2, A_3)
+        local args = {
+    [1] = "HEHEHEHA",
+    [2] = Client.Values.ChatMsg,
+    [3] = false,
+    [5] = false,
+    [6] = true
+}
+
+game:GetService("ReplicatedStorage").Events.PlayerChatted:FireServer(unpack(args))
         wait(0.1)
         end
     end
 end)
-MiscTabMainSection:Textbox("Custom Chat Message","Zapp0s Ware V2 On Top",function(x)
+
+
+-- Script generated by SimpleSpy - credits to exx#9394
+
+--[[local args = {
+    [1] = "HEHEHEHA",
+    [2] = Client.Values.ChatMsg,
+    [3] = false,
+    [5] = false,
+    [6] = true
+}
+
+game:GetService("ReplicatedStorage").Events.PlayerChatted:FireServer(unpack(args))
+]]--
+
+
+MiscTabMainSection:Textbox("Custom Chat Message","xonaes Anti Cheat Updates Are Nothing But Pathetic (Zapp0s Ware v3 updated and owning this dogs)",function(x)
 		Client.Values.ChatMsg = tostring(x)
 	end)
 
@@ -2441,6 +2491,8 @@ MiscTabMainSection:Button("Teleport To Frog Game",function()
     game.TeleportService:Teleport(5133094040,game.Players.LocalPlayer,{SuperSecretCode="NotSoSuperSecretPoggyWoggy"})
 end)
 
+
+
 local MiscTabMenuSection=MiscTab:Section("Menu")
 MiscTabMenuSection:Textbox("Menu Title","ARSENAL",function(x)
     local a=x 
@@ -2486,6 +2538,7 @@ MiscTabTrollingSection:Toggle("Enabled",function(x)
     ArsoniaTable.Misc.Trolling.Enabled=x
 end)
 
+
 MiscTabTrollingSection:Toggle("Bullet Annoy",function(x)
     ArsoniaTable.Misc.Trolling.Bulletannoy=x
 end)
@@ -2520,9 +2573,8 @@ MiscTabTrollingSection:Button("FE Sunglasses Bypassed",function()
         while true do wait(0.1) game:GetService("ReplicatedStorage").Events.Sunglasses:FireServer() end
 
 end)
-
 MiscTabTrollingSection:Button("Get FE Rectangle Must Have Monky To Work",function()
-
+    
 game.Players.LocalPlayer.Character["Banana Bod"].Handle.SpecialMesh:Destroy()
 game.Players.LocalPlayer.Character["Banana Bod"].Handle.Decal:Destroy()
 game:GetService("Players").LocalPlayer.Data.Skin.Value = "Nonexisty"
@@ -2569,6 +2621,7 @@ end)
 
 MiscTabTrollingSection:Button("FE Headless",function()
     
+    
 if game.Players.LocalPlayer.Character:FindFirstChild("HeadHB")then
             game.Players.LocalPlayer.Character:FindFirstChild("HeadHB"):Destroy()
         end
@@ -2592,14 +2645,14 @@ end)
 local MiscTabSaveSection=MiscTab:Section("Configs")
 MiscTabSaveSection:Button("Save",function()
     pcall(function()
-        delfile("CFG_1_.lua")
+        delfile("Kopp0s_SAVE_.lua")
     end)
-    writefile("CFG_1_.lua","return"..ArsoniaTable.Variables.Functions.Unpacktable(getgenv().ArsoniaSettings))
+    writefile("Kopp0s_SAVE_.lua","return"..ArsoniaTable.Variables.Functions.Unpacktable(getgenv().ArsoniaSettings))
 end)
 MiscTabSaveSection:Button("Load",function()
     local a=0
     local b=0
-    for i,v in pairs(loadfile("CFG_1_.lua")())do
+    for i,v in pairs(loadfile("Kopp0s_SAVE_.lua")())do
         a=a+1
         for _=1,25 do
             if pcall(function()
@@ -2625,14 +2678,14 @@ end)
 local MiscTabSaveSection=MiscTab:Section("Configs 2")
 MiscTabSaveSection:Button("Save",function()
     pcall(function()
-        delfile("CFG_2_.lua")
+        delfile("Zapp0s_SAVE_.lua")
     end)
-    writefile("CFG_2_.lua","return"..ArsoniaTable.Variables.Functions.Unpacktable(getgenv().ArsoniaSettings))
+    writefile("Zapp0s_SAVE_.lua","return"..ArsoniaTable.Variables.Functions.Unpacktable(getgenv().ArsoniaSettings))
 end)
 MiscTabSaveSection:Button("Load",function()
     local a=0
     local b=0
-    for i,v in pairs(loadfile("CFG_2_.lua")())do
+    for i,v in pairs(loadfile("Zapp0s_SAVE_.lua")())do
         a=a+1
         for _=1,25 do
             if pcall(function()
@@ -2658,14 +2711,14 @@ end)
 local MiscTabSaveSection=MiscTab:Section("Configs 3")
 MiscTabSaveSection:Button("Save",function()
     pcall(function()
-        delfile("CFG_3_.lua")
+        delfile("Popp0s_SAVE_.lua")
     end)
-    writefile("CFG_3_.lua","return"..ArsoniaTable.Variables.Functions.Unpacktable(getgenv().ArsoniaSettings))
+    writefile("Popp0s_SAVE_.lua","return"..ArsoniaTable.Variables.Functions.Unpacktable(getgenv().ArsoniaSettings))
 end)
 MiscTabSaveSection:Button("Load",function()
     local a=0
     local b=0
-    for i,v in pairs(loadfile("CFG_2_.lua")())do
+    for i,v in pairs(loadfile("Popp0s_SAVE_.lua")())do
         a=a+1
         for _=1,25 do
             if pcall(function()
@@ -2692,19 +2745,16 @@ end)
 local E=Window:Tab("Info")
 local W=E:Section("Info")
 
-W:Button("RightShift - Open/Close Menu",function()
+W:Button("Press RightShift To Hide The GUI",function()
     print("Button Pressed")
 end)
 
-W:Button("Updated to v2 12/14/2022",function()
-    print("Button Pressed")
-end)
-W:Button("Zaplec (owner) Site",function()
-    setclipboard("https://www.zaplec.pt/?i=1")
+W:Button("Copy Discord Link To Clip Board",function()
+    setclipboard("https://discord.gg/pornhub")
 end)
 W:Button("Click to copy TOS",function()
 
-setclipboard("I don't give a fuck if u get banned lmao")
+setclipboard("Idgaf if u dont know how to use the script so gtfo")
 end)
 W:Button("Undetected Once Again",function()
 print("fuck")
@@ -2712,11 +2762,14 @@ end)
 local E=Window:Tab("Credits")
 local W=E:Section("Credits")
 
-W:Button("zap#9999- Owner",function()
+W:Button("zap#9999 - Owner",function()
     print("Button Pressed")
 end)
-W:Button("Boas - Best Portugal Discord Server",function()
-    setclipboard("https://discord.gg/lamborghini")
+W:Button("Pornhub lmao - Helper",function()
+    setclipboard("https://pt.pornhub.com/users/zaplec")
+end)
+W:Button("eddan - Co Owner",function()
+    print("Button Pressed")
 end)
 
 --[[
