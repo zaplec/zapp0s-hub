@@ -9,4 +9,7 @@ if game.PlaceId == 292439477 then -- Phantom Forces
 end 
 if game.PlaceId == 6407649031 then -- NoScope Arcade
     loadstring(game:HttpGet("https://raw.githubusercontent.com/zaplec/zapp0s-hub/Games/6407649031.lua", true))()
-end   
+end
+if game.PlaceId = 370731277 then -- MeepCity
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/zaplec/meepshit/main/script.lua", true))()
+end
